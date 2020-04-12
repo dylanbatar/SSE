@@ -1,0 +1,38 @@
+<mat-toolbar color="primary"> </mat-toolbar>
+
+<main class="content" fxLayout="colmun" fxLayoutAlign="center">
+  <div class="bg">
+    <img src="assets/svg/forms.svg" alt="" />
+  </div>
+
+  <section class="form">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Sistema de seguimiento estudiantil
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="form">
+          <mat-form-field
+            appearance="fill"
+            hideRequiredMarker="false"
+            [floatLabel]="form.get('code').value"
+          >
+            <mat-label>Codigo de universidad</mat-label>
+            <input
+              required
+              type="password"
+              formControlName="code"
+              matInput
+              placeholder="Ej.xxxxx"
+            />
+          </mat-form-field>
+          <button mat-raised-button color="primary" [disabled]="form.invalid" routerLink="/dasboard">
+            Verificar
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</main>

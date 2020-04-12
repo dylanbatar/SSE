@@ -1,0 +1,19 @@
+.content {
+  height: 90%;
+  width: 100%;
+  position: relative;
+}
+.form{
+  margin-top: 4rem;
+}
+mat-form-field {
+  width: 100%;
+}
+.bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  img{
+    width: 500px;
+  }
+}
