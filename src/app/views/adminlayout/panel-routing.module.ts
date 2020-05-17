@@ -17,9 +17,19 @@ const routes: Routes = [
         loadChildren: () =>
           import("./students/students.module").then((m) => m.StudentsModule),
       },
+      {
+        path: "estudiante/:id",
+        loadChildren: () =>
+          import("./profile/profile.module").then((m) => m.ProfileModule),
+      },
+      {
+        path: "preguntas",
+        loadChildren: () =>
+          import(`./questions/questions.module`).then((m) => m.QuestionsModule),
+      },
     ],
   },
-  { path: "**", pathMatch: "full" , redirectTo:"dashboard"},
+  { path: "**", pathMatch: "full", redirectTo: "dashboard" },
 ];
 
 @NgModule({

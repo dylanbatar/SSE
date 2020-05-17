@@ -1,1 +1,22 @@
-<app-table-paginator [elementData]="ELEMENT_DATA"></app-table-paginator>
+<div class="" fxFlex="row" fxFlex="auto">
+  <ng-container *ngIf="student.length > 0">
+
+    <div class="" fxFlex="70">
+      <mat-card>
+        <mat-card-title>
+          <mat-icon aria-hidden="true">view_list</mat-icon>
+          Lista de usuarios
+        </mat-card-title>
+      </mat-card>
+      <mat-card-content style="margin-bottom: 0;">
+        <app-table-paginator  [elementData]="student"></app-table-paginator>
+      </mat-card-content>
+
+    </div>
+
+  </ng-container>
+
+  <mat-card fxFlexOffset="1" fxFlex="30">
+    <mat-card-title fxLayoutAlign="center center">Estudiantes Criticos</mat-card-title>
+  </mat-card>
+</div>

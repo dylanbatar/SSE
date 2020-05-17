@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="">
+        Panel de preguntas
+      </div>
+      <div class="">
+        <button mat-raised-button color="primary">CREAR PREGUNTA</button>
+      </div>
+    </div>
+  </mat-card-title>
+
+  <app-table-paginator [displayedColumns]="['nombre','respuesta','modulo']" [elementData]="data"></app-table-paginator>
+
+</mat-card>

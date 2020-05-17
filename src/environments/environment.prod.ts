@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  webService:"https://vjcontabilidad.herokuapp.com/api"
 };

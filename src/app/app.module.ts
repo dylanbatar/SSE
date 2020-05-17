@@ -8,6 +8,7 @@ import { PanelModule } from "./views/adminlayout/panel.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./materials/material.module";
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, InicioComponent],
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PanelModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

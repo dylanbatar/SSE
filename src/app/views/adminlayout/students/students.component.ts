@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ApiService } from "src/app/services/api.service";
+import { IStudent } from "src/app/interfaces/istudent";
 
 @Component({
   selector: "app-students",
@@ -6,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./students.component.scss"],
 })
 export class StudentsComponent implements OnInit {
+  student: IStudent[] = [];
+
   ELEMENT_DATA: any[] = [
     { position: 5, name: "Hydrogen", weight: 1.0079, symbol: "H" },
     { position: 2, name: "Helium", weight: 4.0026, symbol: "He" },
@@ -18,7 +22,16 @@ export class StudentsComponent implements OnInit {
     { position: 9, name: "Fluorine", weight: 18.9984, symbol: "F" },
     { position: 10, name: "Neon", weight: 20.1797, symbol: "Ne" },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(private _api: ApiService) {}
+
+  ngOnInit(): void {
+    this.getUser();
+  }
+
+  getUser():void {
+    this._api.getListUser("rafa").subscribe((response) => {
+      this.student = response;
+    });
+  }
 }
